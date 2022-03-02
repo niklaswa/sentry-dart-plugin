@@ -1,6 +1,11 @@
 # Changelog
 
-## Unreleased
+## 1.0.0-beta.2
+
+### Various fixes & improvements
+
+- Add required --source-maps opt to README (14a37814) by @marandaneto
+- prepare: 1.0.0-beta.2 (294665ea) by @marandaneto
 
 ## 1.0.0-beta.1
 
