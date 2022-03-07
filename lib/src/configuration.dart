@@ -51,6 +51,9 @@ class Configuration {
   /// The Apps name, defaults to name from pubspec
   late String name;
 
+  /// Overwrite full release name
+  late String? release;
+
   /// the Web Build folder, defaults to build/web
   late String webBuildFilesFolder;
 
@@ -70,8 +73,10 @@ class Configuration {
     final pubspec = _getPubspec();
     final config = pubspec['sentry'];
 
-    version = config?['release']?.toString() ?? pubspec['version'].toString();
+    version = pubspec['version'].toString();
     name = pubspec['name'].toString();
+
+    release = config?['release']?.toString() ?? null;
 
     uploadNativeSymbols = config?['upload_native_symbols'] ?? true;
     uploadSourceMaps = config?['upload_source_maps'] ?? false;

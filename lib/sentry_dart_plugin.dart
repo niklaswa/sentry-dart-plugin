@@ -168,6 +168,9 @@ class SentryDartPlugin {
   }
 
   String _getRelease() {
+    if (_configuration.release != null) {
+      return _configuration.release!;
+    }
     return '${_configuration.name}@${_configuration.version}';
   }
 
